@@ -9,3 +9,4 @@ console.log(sliceText)
 alert('Результат: ' + sliceText)
 
 //текст текст текст
+//123
