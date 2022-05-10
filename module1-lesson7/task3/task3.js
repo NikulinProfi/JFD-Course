@@ -5,7 +5,7 @@ let totalJuniorDevelopersSalary =
   salaryOfJuniorDeveloper * numberOfJuniorDevelopers
 console.log('totalJuniorDevelopersSalary', totalJuniorDevelopersSalary)
 
-for (let i = 0; i < numberOfJuniorDevelopers; i += 1) {
+for (let i = 0; i < numberOfJuniorDevelopers; i++) {
   const salaryWithTax =
     salaryOfJuniorDeveloper - (salaryOfJuniorDeveloper * taxPercentage) / 100
   console.log('salaryOfJuniorDeveloper', salaryOfJuniorDeveloper)
