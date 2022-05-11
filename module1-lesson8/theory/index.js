@@ -50,6 +50,8 @@ sum(3, 10, console.log)
 
 // console.log(sum(2, 3))
 
+// НИЖЕ НЕ ТЕОРИЯ
+
 function sum(a, b, callback) {
   const result = a + b
   callback(result)
