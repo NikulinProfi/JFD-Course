@@ -15,8 +15,18 @@ const getSumOfNumbers = function (number, type = 'odd') {
     } else if (type === '') {
       sum += i
     }
+    // switch (type) {
+    //   case 'odd':
+    //     sum += isEven ? 0 : i // нечетные
+    //     break
+    //   case 'even':
+    //     sum += isEven ? i : 0 // четные
+    //     break
+    //   case '':
+    //     sum += i
+    //     break
+    // }
   }
-
   return sum
 }
 console.log('odd:', getSumOfNumbers(10, 'odd'))
