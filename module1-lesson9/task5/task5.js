@@ -4,7 +4,6 @@ function askClientToGiveEstimation() {
     const score = Number(prompt(`Как вы оцениваете нашу кофейню от 1 до 10?`))
     if (score >= 1 && score <= 10) {
       clientsEstimations.push(score)
-    } else {
     }
   }
 }
@@ -13,7 +12,7 @@ askClientToGiveEstimation()
 console.log(clientsEstimations)
 
 const goodEstimations = clientsEstimations.filter((index) => {
-  return index >= 5
+  return index > 5
 })
 const notGoodEstimations = clientsEstimations.filter((index) => {
   return index <= 5
