@@ -1,34 +1,19 @@
 const coffees = ['Latte', 'Cappuccino', 'Americano']
-let coffeeName = prompt('Поиск кофе по названию:')
+const coffeeName = prompt('Поиск кофе по названию:').toLowerCase().trim()
 
-// const answerClient = (i => ())
+let indexOfCoffe = coffees.findIndex((coffee) => {
+  return coffee.toLowerCase() === coffeeName
+})
 
-// const number = coffees.findIndex((item) => item.length) // coffeeName
-// console.log('number', number) // если переданного элемента не существует в массиве, то будет передано -1
+// console.log(indexOfCoffe)
+// console.log(coffeeName)
 
-// for (coffeeName of coffees) {
-let isHaveCoffee = false
-
-coffees.forEach((coffee) => {
-  // coffee = coffee.toLowerCase
-  if (coffee.toLowerCase() === coffeeName.toLowerCase()) {
-    isHaveCoffee = true
-  }
-})(coffees.forEach(coffee) === true)
-  ? arert(
-      `Держите ваш любимый кофе ${coffees}. Он ${number}-й по популярности в нашей кофейне.`
-    )
-  : alert(`К сожалению, такого вида кофе нет в наличии`)
-
-// if else ?
-
-// if (coffeeName === coffees.findIndex(() => {})) {
-//   arert(
-//     `Держите ваш любимый кофе ${coffees}. Он ${number}-й по популярности в нашей кофейне.`
-//   )
-// } else {
-//   alert(`К сожалению, такого вида кофе нет в наличии`)
-// }
-// }
-
-//
+if (indexOfCoffe > -1) {
+  alert(
+    `Держите ваш любимый кофе ${coffeeName}. Он ${
+      indexOfCoffe + 1
+    }-й по популярности в нашей кофейне`
+  )
+} else {
+  alert(`К сожалению, такого вида кофе нет в наличии`)
+}
