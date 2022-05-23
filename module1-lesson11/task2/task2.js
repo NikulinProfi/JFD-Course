@@ -1,19 +1,17 @@
+const birthdayDate = new Date(2023, 4, 19)
+
 function getDaysBeforeBirthday(nextBirthdayDate) {
-  nextBirthdayDate = new Date(2023, 4, 19)
-  // console.log(nextBirthdayDate)
   const dayNow = Date.now()
-  // console.log(dayNow)
+  nextBirthdayDate = nextBirthdayDate.getTime()
   difference = nextBirthdayDate - dayNow
-  // console.log(difference)
   return difference
 }
-function convertMsToDays() {
-  const convertMsToDays = getDaysBeforeBirthday() / 1000 / 60 / 60 / 24
-  // console.log(convertMsToDays)
+function convertMsToDays(ms) {
+  const convertMsToDays = ms / 1000 / 60 / 60 / 24
   const round = Math.round(convertMsToDays)
-  // console.log(round)
+  console.log(round)
   return round
 }
 
-getDaysBeforeBirthday()
-convertMsToDays()
+const result = getDaysBeforeBirthday(birthdayDate)
+convertMsToDays(result)
