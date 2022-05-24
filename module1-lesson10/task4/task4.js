@@ -13,5 +13,6 @@ function giveJobToStudent(student, jobName) {
   alert(
     `Поздравляем! У студента ${student.fullName} появилась новая работа! Теперь он ${jobName}`
   )
-  return student
+
+  return newObj
 }

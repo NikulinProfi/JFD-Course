@@ -8,5 +8,4 @@ function addDays(date, days = 1) {
   return new Date(date + days)
 }
 
-console.log(addDays(newDay, 700))
-//Mon Apr 01 2002 00:00:00 GMT+0400 (Москва, летнее время)
+console.log(addDays(newDay, 1))
