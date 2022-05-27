@@ -14,18 +14,12 @@ const bird = {
   },
 }
 
-function makeDomestic(isDomestic) {
+function makeDomestic(isDomestic = true) {
   alert(`${this.type} по имени ${this.name} говорит ${this.makeSound()}`)
-  switch (isDomestic) {
-    case true:
-      this.isDomestic = true
-      break
-    case false:
-      this.isDomestic = false
-      break
+  return {
+    ...this,
+    isDomestic: isDomestic,
   }
-  console.log(this)
-  return this
 }
 
 const bindedMakeDomestic = makeDomestic.bind(dog, true) // вернет объект: {name: 'Чарли', type: 'Собака', isDomestic: true, makeSound: ƒ}
