@@ -1,6 +1,6 @@
 const footballer = {
   fullName: 'Cristiano Ronaldo',
-  attack() {
+  attack: function () {
     console.log(`${this.fullName} сейчас с мячом и начинает атаку!`)
   },
   scoreGoal(sound) {
@@ -9,6 +9,7 @@ const footballer = {
   },
   celebrate(sound) {
     console.log(sound)
+    return this.sound
   },
   goToSubstitution: function (newPlayer) {
     console.log(
@@ -16,15 +17,13 @@ const footballer = {
     )
   },
 }
-const attack = footballer.attack.bind(footballer)
-// console.log('attack', attack)
+const attack = footballer.attack
+const bindedAttack = attack.bind(footballer)
+bindedAttack()
 
-const score = footballer.scoreGoal.call(footballer)
-// console.log('score', score)
+const score = footballer.scoreGoal
+score.call(footballer, 'Сиииии')
 
-const substitute = footballer.goToSubstitution.apply(footballer)
-// console.log('substitute', substitute)
-
-attack()
-score('Сиииии')
-substitute('Paulo Dibala')
+const substitute = footballer.goToSubstitution.apply(footballer, [
+  'Paulo Dibala',
+])

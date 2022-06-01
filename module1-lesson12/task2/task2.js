@@ -15,7 +15,7 @@ const bird = {
 }
 
 function makeDomestic(isDomestic) {
-  alert(`${this.type} по имени ${this.name} говорит ${this.makeSound()}`)
+  console.log(`${this.type} по имени ${this.name} говорит ${this.makeSound()}`)
   return {
     ...this,
     isDomestic: isDomestic,
