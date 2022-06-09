@@ -18,7 +18,7 @@ class JuniorDeveloper extends Developer {
     this.technologies = ['HTML', 'CSS', 'JavaScript']
   }
   code() {
-    console.log('Junior разработчик пишет код...')
+    console.log(`${this.position} разработчик пишет код...`)
   }
 }
 
@@ -28,7 +28,7 @@ class MiddleDeveloper extends Developer {
     this.technologies = ['HTML', 'CSS', 'JavaScript', 'React']
   }
   code() {
-    console.log('Middle разработчик пишет код...')
+    console.log(`${this.position} разработчик пишет код...`)
   }
 }
 
@@ -38,7 +38,7 @@ class SeniorDeveloper extends Developer {
     this.technologies = ['HTML', 'CSS', 'JavaScript', 'React', 'NodeJS']
   }
   code() {
-    console.log('Senior разработчик пишет код...')
+    console.log(`${this.position} разработчик пишет код...`)
   }
 }
 
