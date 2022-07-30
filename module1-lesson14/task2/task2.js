@@ -27,15 +27,15 @@ const tasks = [
 function getTasks(obj) {
   const tasksList = document.querySelector('.tasks-list')
 
-  const div1 = document.createElement('div')
-  div1.className = 'task-item'
-  div1.dataset.taskId = obj.id
+  const taskItem1 = document.createElement('div')
+  taskItem1.className = 'task-item'
+  taskItem1.dataset.taskId = obj.id
 
-  const div2 = document.createElement('div')
-  div2.className = 'task-item__main-container'
+  const taskItem2 = document.createElement('div')
+  taskItem2.className = 'task-item__main-container'
 
-  const div3 = document.createElement('div')
-  div3.className = 'task-item__main-content'
+  const taskItem3 = document.createElement('div')
+  taskItem3.className = 'task-item__main-content'
 
   const form = document.createElement('form')
   form.className = 'checkbox-form'
@@ -55,12 +55,13 @@ function getTasks(obj) {
   const button = document.createElement('button')
   button.className = 'task-item__delete-button default-button delete-button'
   button.textContent = 'Удалить'
+  button.dataset.deleteTaskId = obj.id
 
   form.append(label, input)
-  div3.append(form, span)
-  div2.append(div3, button)
-  div1.append(div2)
-  tasksList.append(div1)
+  taskItem3.append(form, span)
+  taskItem2.append(taskItem3, button)
+  taskItem1.append(taskItem2)
+  tasksList.append(taskItem1)
 }
 
 tasks.forEach((el) => {

@@ -154,7 +154,7 @@ document.addEventListener('contextmenu', (event) => {
 // change (срабатывает, когда убираем фокус с input), input (когжа вводим данные)
 
 // повесим обработчик события change на наш input
-// сначала п олучим input
+// сначала получим input
 
 // создадим функцию для проверки input на валидацию
 

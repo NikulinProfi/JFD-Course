@@ -28,8 +28,10 @@ console.log(newNavButton) // путой тег <a></a>
 // сначала получим элемент main-navigation
 const mainNavigation = document.querySelector('.main-navigation')
 mainNavigation.append(newNavButton)
+// console.log(mainNavigation)
 
 mainNavigation.insertAdjacentElement('afterbegin', newNavButton)
+// console.log(mainNavigation)
 
 // Удаление элементов из дома
 // remove
